@@ -1,7 +1,7 @@
 #NODE JS runtime
 FROM node:latest
 
- Create app directory
+# Create app directory
 WORKDIR /usr/src/app
 
 # Update 
