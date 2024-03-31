@@ -2,6 +2,7 @@
   "name": "base64-to-tmpimage",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "src/index.ts",
   "scripts": {
     "forever": "forever start ts-node src/index.ts",
@@ -11,7 +12,19 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.19.2",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.4.3"
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/jasmine": "^5.1.4",
+    "jasmine-core": "^5.1.2",
+    "karma": "^6.4.3",
+    "karma-chrome-launcher": "^3.2.0",
+    "karma-jasmine": "^5.1.0",
+    "karma-webpack": "^5.0.1",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.4.3",
+    "webpack": "^5.91.0",
+    "webpack-dev-server": "^5.0.4"
   }
 }
