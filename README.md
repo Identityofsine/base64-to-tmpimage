@@ -28,14 +28,14 @@ This project serves as a convenient solution for handling base64 image conversio
 To create a file, you make a post request to `http://localhost:5051/`:
 ```json
 {
-	"file":"data:image/png;base64,..."
+  "file":"data:image/png;base64,..."
 }
 ```
  which will return a 200 response of
 ```json
 {
- "path":  "http://localhost:5051/ti/1711916154977.png",
- "expiration":  "1711917954977"
+  "path":  "http://localhost:5051/ti/1711916154977.png",
+  "expiration":  "1711917954977"
 }
 ```
 
