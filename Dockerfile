@@ -12,7 +12,7 @@ RUN apt-get update
 # give user node execute permissions for chrome
 RUN npm install -g nodemon
 RUN npm install -g typescript
-RUN npm install -g ts-node
+RUN npm install -g tsx
 
 # Copy package.json and install dependencies
 COPY package*.json ./
