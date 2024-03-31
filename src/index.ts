@@ -4,9 +4,6 @@ import path from 'path';
 import * as dotenv from 'dotenv'
 dotenv.config()
 
-//env
-require('dotenv').config();
-
 try {
 	TemporaryFile.createTempFolder();
 	TemporaryFile.deleteTempFiles();
