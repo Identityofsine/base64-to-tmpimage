@@ -21,7 +21,7 @@ export class TemporaryFile {
 		* @param extension {string} - The extension of the file (e.g. '.txt', '.png') 
 		* @param ttk {number} - The time to keep the file in the system in seconds
 	*/
-	constructor(private content: Buffer, private extension: string, private ttk: number = 30, private onDeleted?: () => void) {
+	constructor(private content: Buffer, private extension: string, private ttk: number = 60, private onDeleted?: () => void) {
 		this.createFile();
 	}
 
@@ -110,7 +110,7 @@ export class TemporaryFile {
 		return '';
 	}
 
-	public static createFromBase64(base64: string, extension: string, ttk: number = 30, onDeleted?: () => void): TemporaryFile {
+	public static createFromBase64(base64: string, extension: string, ttk?: number, onDeleted?: () => void): TemporaryFile {
 		const base64Regex = /^data:image\/(.*?);base64,/;
 		const buffer = Buffer.from(base64.replace(base64Regex, ''), 'base64');
 
