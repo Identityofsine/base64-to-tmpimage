@@ -42,6 +42,7 @@ export class TemporaryFile {
 		this.deleteTimer = setTimeout(() => {
 			this.deleteFile();
 		}, this.ttk * 1000);
+		console.log(this.ttk * 1000)
 	}
 
 	private deleteFile(): void {
