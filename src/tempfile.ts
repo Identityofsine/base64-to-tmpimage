@@ -104,6 +104,7 @@ export class TemporaryFile {
 	}
 
 	public static detectExtensionImage(base64: string): string {
+		if (!base64) throw new TemporaryFileError('Base64 is empty');
 		const base64Regex = /^data:image\/(.*?);base64/;
 		const extension = base64.replaceAll(" ", "").match(base64Regex);
 		if (extension) {
