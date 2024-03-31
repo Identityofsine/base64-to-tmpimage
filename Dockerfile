@@ -1,6 +1,8 @@
 #NODE JS runtime
 FROM node:latest
 
+
+
 # Create app directory
 WORKDIR /usr/src/app
 
@@ -19,7 +21,7 @@ RUN npm install
 # Copy the rest of the application code
 COPY . .
 
-EXPOSE 5050
+EXPOSE 3000 
 
 # Start the application
 CMD ["npm", "run", "dev"]
