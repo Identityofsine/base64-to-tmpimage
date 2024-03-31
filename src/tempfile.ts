@@ -23,7 +23,7 @@ export class TemporaryFile {
 		* @param extension {string} - The extension of the file (e.g. '.txt', '.png') 
 		* @param ttk {number} - The time to keep the file in the system in seconds
 	*/
-	constructor(private content: Buffer, private extension: string, private ttk: number = 60, private onDeleted?: () => void) {
+	constructor(private content: Buffer, private extension: string, private ttk: number = 60 * 60 * 2, private onDeleted?: () => void) {
 		this.createFile();
 	}
 
