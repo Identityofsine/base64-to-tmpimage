@@ -5,6 +5,7 @@
   "type": "module",
   "main": "src/index.ts",
   "scripts": {
+		"start": "ts-node src/index.ts",
     "forever": "forever start ts-node src/index.ts",
     "dev": "nodemon -L src/index.ts"
   },

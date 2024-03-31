@@ -12,6 +12,7 @@ RUN apt-get update
 # give user node execute permissions for chrome
 RUN npm install -g nodemon
 RUN npm install -g typescript
+RUN npm install -g ts-node
 
 # Copy package.json and install dependencies
 COPY package*.json ./
@@ -23,4 +24,4 @@ COPY . .
 EXPOSE 3000 
 
 # Start the application
-CMD ["npm", "run", "dev"]
+CMD ["npm", "start"]
