@@ -2,7 +2,6 @@
   "name": "base64-to-tmpimage",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
   "main": "src/index.ts",
   "scripts": {
 		"start": "ts-node src/index.ts",
