@@ -30,6 +30,9 @@ app.get('/:file', (req, res) => {
 app.post('/', (req, res) => {
 	try {
 		const { file } = req.body;
+		if (!file) {
+			return res.status(400).json({ error: 'No file provided' }).send();
+		}
 		const extension = TemporaryFile.detectExtensionImage(file);
 		const temp_file = TemporaryFile.createFromBase64(file, extension);
 		const path = temp_file?.getFileName();
