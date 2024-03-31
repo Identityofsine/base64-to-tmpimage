@@ -1,4 +1,6 @@
 import * as fs from 'fs';
+import * as dotenv from 'dotenv'
+dotenv.config()
 
 export class TemporaryFileError extends Error {
 	constructor(message: string) {

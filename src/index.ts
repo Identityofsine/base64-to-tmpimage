@@ -1,8 +1,6 @@
 import express from 'express';
 import { TemporaryFile } from './tempfile';
 import path from 'path';
-import * as dotenv from 'dotenv'
-dotenv.config()
 
 try {
 	TemporaryFile.createTempFolder();
